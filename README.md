@@ -144,10 +144,10 @@ Halaman utama menampilkan daftar produk yang memiliki status "bisa dijual". Anda
 ### Endpoint
 
 - **URL**: `https://recruitment.fastprint.co.id/tes/api_tes_programmer`
-- **Metode**: GET
-- **Autentikasi**: Basic Auth
-    - **Username**: `tesprogrammer060225C15`
-    - **Password**: `md5('bisacoding-' . date('d') . '-' . date('m') . '-' . date('y'))`
+- **Metode**: POST
+- **Autentikasi**: Form Data
+    - **Username**: ambil dari header
+    - **Password**: `md5('bisacoding-' . date('d-m-y'))`
 
 ### Contoh Response
 
