@@ -21,7 +21,19 @@ namespace App\Console\Commands;
        public function handle()
        {
            $username = 'tesprogrammer060225C18';
-           $password = 'ccb38d90448765b16de3237418259c26';
+
+
+           $password = md5("bisacoding-" . date('d-m-y')); // tanggal sekarang , dan bulan , dan tahun 25 itu tahun 2025
+
+
+           $response = Http::withHeaders([
+               'Cookie' => 'ci_session=ohv52jht464k1n12neb20vde6vq90vj3'
+           ])->asForm()->post('https://recruitment.fastprint.co.id/tes/api_tes_programmer', [
+               'username' => $username,
+               'password' => $password
+           ]);
+
+           $username = explode(' ', $response->header('X-Credentials-Username'))[0];
 
            $response = Http::withHeaders([
                'Cookie' => 'ci_session=ohv52jht464k1n12neb20vde6vq90vj3'
