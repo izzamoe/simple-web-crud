@@ -33,7 +33,7 @@ Proyek ini adalah aplikasi web sederhana yang dibangun menggunakan Laravel. Apli
 1. **Clone Repository**
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/izzamoe/simple-web-crud
    cd tes-junior-programmer
    ```
 
